@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Grade 2</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem; /* Horizontal spacing */
+      row-gap: 2rem;    /* Vertical spacing */
+      margin-top: 2rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+    }
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: 0.3s;
+      width: 100%;
+    }
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+    .tooltip {
+      display: none;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+    .wrapper:hover .tooltip {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 1 Math Worlds</h1>
+  <div class="map">
+    <div class="wrapper">
+      <div class="zone">Numbers to 100</div>
+      <div class="tooltip">
+        - Counting to 100<br>
+        - Number names<br>
+        - Comparing & ordering<br>
+        - Skip counting<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Addition & Subtraction</div>
+      <div class="tooltip">
+        - Facts to 20<br>
+        - Word problems<br>
+        - Missing addends<br>
+        - Real-life math stories<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Place Value</div>
+      <div class="tooltip">
+        - Tens and Ones<br>
+        - Base-10 blocks<br>
+        - Expanded form<br>
+        - Comparing place values<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Time</div>
+      <div class="tooltip">
+        - Hour & half hour<br>
+        - Analog & digital<br>
+        - Sequencing events<br>
+        - Days of the week<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Shapes</div>
+      <div class="tooltip">
+        - 2D shapes<br>
+        - Attributes (sides, corners)<br>
+        - Sorting shapes<br>
+        - Real-world examples<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Measurement</div>
+      <div class="tooltip">
+        - Length & height<br>
+        - Comparing objects<br>
+        - Non-standard units<br>
+        - Capacity & weight (intro)<br>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="zone">Patterns</div>
+      <div class="tooltip">
+        - Repeating patterns<br>
+        - Growing patterns<br>
+        - Describing rules<br>
+        - Extending patterns<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
