@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillBricks Interactive Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+
+    .progress-container {
+      width: 100%;
+      background: #1a1a2e;
+      height: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .slide {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #00c6ff;
+    }
+
+    input, select, textarea, button {
+      font-size: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      width: 80%;
+      max-width: 400px;
+      margin: 10px 0;
+    }
+
+    input, select, textarea {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    button {
+      background: #00c6ff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #0072ff;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .options label {
+      background: #ffffff;
+      color: #001f3f;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .options input[type="checkbox"] {
+      display: none;
+    }
+
+    .options input[type="checkbox"]:checked + label {
+      background: #001f3f;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <form id="multiStepForm">
+    <!-- Slide 1: Parent and Student Name -->
+    <div class="slide active" id="slide1">
+      <div class="icon"><i class="fas fa-user"></i></div>
+      <h2>Welcome to SkillBricks!</h2>
+      <input type="text" id="parentName" placeholder="Enter Parent's Name" required />
+      <input type="text" id="studentName" placeholder="Enter Student's Name" required />
+      <button type="button" onclick="nextSlide(2)">Next</button>
+    </div>
+
+    <!-- Slide 2: Email -->
+    <div class="slide" id="slide2">
+      <div class="icon"><i class="fas fa-envelope"></i></div>
+      <h2>Your Email</h2>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="button" onclick="nextSlide(3)">Next</button>
+    </div>
+
+    <!-- Slide 3: Session Type -->
+    <div class="slide" id="slide3">
+      <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+      <h2>Session Type</h2>
+      <select id="sessionType" required>
+        <option value="">Select one</option>
+        <option value="Consultation (45 mins to 1 hour)">Consultation (45 mins to 1 hour)</option>
+        <option value="Parent Consultation (30 mins)">Parent Consultation (30 mins)</option>
+      </select>
+      <button type="button" onclick="nextSlide(4)">Next</button>
+    </div>
+
+    <!-- Slide 4: Student Grade -->
+    <div class="slide" id="slide4">
+      <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+      <h2>Student Grade</h2>
+      <select id="grade" required>
+        <option value="">Select an option</option>
+        <option value="1">1st Grade</option>
+        <option value="2">2nd Grade</option>
+        <option value="3">3rd Grade</option>
+        <option value="4">4th Grade</option>
+        <option value="5">5th Grade</option>
+        <option value="6">6th Grade</option>
+        <option value="7">7th Grade</option>
+        <option value="8">8th Grade</option>
+        <option value="9">9th Grade</option>
+        <option value="10">10th Grade</option>
+      </select>
+      <button type="button" onclick="nextSlide(5)">Next</button>
+    </div>
+
+    <!-- Slide 5: Learning Status -->
+    <div class="slide" id="slide5">
+      <div class="icon"><i class="fas fa-chart-line"></i></div>
+      <h2>Current Learning Status</h2>
+      <div class="options">
+        <input type="checkbox" id="status1" name="status" value="Struggling with basic concepts">
+        <label for="status1">Struggling with basic concepts</label>
+
+        <input type="checkbox" id="status2" name="status" value="Doing well but needs encouragement">
+        <label for="status2">Doing well but needs encouragement</label>
+
+        <input type="checkbox" id="status3" name="status" value="Excelling beyond grade level">
+        <label for="status3">Excelling beyond grade level</label>
+      </div>
+      <button type="button" onclick="nextSlide(6)">Next</button>
+    </div>
+
+    <!-- Slide 6: Learning Goals -->
+    <div class="slide" id="slide6">
+      <div class="icon"><i class="fas fa-bullseye"></i></div>
+      <h2>Learning Goals</h2>
+      <div class="options" id="goalsSection">
+        <input type="checkbox" id="goal1" name="goals" value="Building strong foundations">
+        <label for="goal1">Building strong foundations</label>
+
+        <input type="checkbox" id="goal2" name="goals" value="Improving confidence">
+        <label for="goal2">Improving confidence</label>
+
+        <input type="checkbox" id="goal3" name="goals" value="Encouraging creativity and expression">
+        <label for="goal3">Encouraging creativity and expression</label>
+      </div>
+      <button type="button" onclick="submitForm(event)">Submit</button>
+    </div>
+
+    <!-- Confirmation Slide -->
+    <div class="slide" id="confirmation">
+      <div class="icon"><i class="fas fa-check-circle"></i></div>
+      <h2>Thank you for your submission!</h2>
+      <p id="confirmationText"></p>
+    </div>
+  </form>
+
+  <script>
+    let current = 1;
+    const totalSlides = 6;
+    const progressBar = document.getElementById("progressBar");
+
+    // Function to move to the next slide
+    function nextSlide(nextSlideNumber) {
+      const currentSlide = document.getElementById(slide${current});
+      if (currentSlide) currentSlide.classList.remove('active');
+      
+      current = nextSlideNumber;
+      const nextSlide = document.getElementById(slide${current});
+      if (nextSlide) nextSlide.classList.add('active');
+      
+      updateProgressBar();
+    }
+
+    // Function to update the progress bar
+    function updateProgressBar() {
+      progressBar.style.width = ${(current / totalSlides) * 100}%;
+    }
+
+    // Function to submit the form and show confirmation
+    function submitForm(event) {
+      event.preventDefault();  // Prevent form submission
+
+      // Gather all form data
+      const formData = new FormData(document.getElementById("multiStepForm"));
+      let formDetails = "";
+      formData.forEach((value, key) => {
+        formDetails += <strong>${key}</strong>: ${value}<br>;
+      });
+
+      // Display confirmation message
+      const confirmationText = document.getElementById("confirmationText");
+      confirmationText.innerHTML = "Thank you for your submission!<br><br>" + formDetails;
+
+      // Display confirmation slide (does not try to go to a non-existing slide)
+      const currentSlide = document.getElementById(slide${current});
+      if (currentSlide) currentSlide.classList.remove('active');
+      document.getElementById("confirmation").classList.add('active');
+    }
+  </script>
+</body>
+</html>
