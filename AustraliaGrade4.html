@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 4 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem; /* Horizontal spacing */
+      row-gap: 2rem;    /* Vertical spacing */
+      margin-top: 2rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+    }
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: 0.3s;
+      width: 100%;
+    }
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+    .tooltip {
+      display: none;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+    .wrapper:hover .tooltip {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 4 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Numbers (5-Digit and 6-Digit) ▼</div>
+      <div class='tooltip'>
+        -Representation of Large Numbers <br>
+
+        -Forming Numbers<br>
+
+        -Place Value and Face Value of a Digit in a Numeral<br>
+
+        -Expanded Form of a Number<br>
+
+        -Successor and Predecessor <br>
+
+        -Compare and Order Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Addition ▼</div>
+      <div class='tooltip'>
+        -Addend and Sum<br>
+
+        -Add Five-Digit Numbers <br>
+
+        -Add Six-Digit Numbers <br>
+
+        -Find the Missing Digit While Adding Numbers<br>
+
+        -Addition - Properties and Facts <br>
+
+        -Word Problems on Addition<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Subtraction ▼</div>
+      <div class='tooltip'>
+        -Minuend, Subtrahend and Difference<br>
+
+        -Subtract Five-Digit Numbers <br>
+
+        -Subtract Six-Digit Numbers <br>
+
+        -Subtraction - Properties and Facts<br>
+
+        -Word Problems on Subtraction<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Addition and Subtraction ▼</div>
+      <div class='tooltip'>
+        -Add and Subtract 2-Digit and 3-Digit Numbers<br>
+
+        -Balance Sentences - Addition and Subtraction (up to 999)<br>
+
+        -Write Number Sentence (For the Given Story)<br>
+
+        -Word Problems Involving Both Addition and Subtraction<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Multiplication ▼</div>
+      <div class='tooltip'>
+        -Multiplicand, Multiplier and Product<br>
+
+        -Multiplication - Properties and Facts <br>
+
+        -Multiplication by Multiples of 10 <br>
+
+        -Multiplication by 2-Digit Numbers <br>
+
+        -Multiplication by 3-Digit Numbers <br>
+
+        -Word Problems on Multiplication<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Division ▼</div>
+      <div class='tooltip'>
+        -Divider, Quotient, Dividend, and Remainder<br>
+
+        -Divide by 10, 100, 1000 etc<br>
+
+        -Divide by Multiples of 10, 100, 1000 etc<br>
+
+        -Long Division <br>
+
+        -Division - Properties and Facts <br>
+
+        -Word Problems on Division<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Unitary Method ▼</div>
+      <div class='tooltip'>
+        -Word problems Using Unitary Method Involving Multiplication<br>
+
+        -Word problems Using Unitary Method Involving Division<br>
+
+        -Word problems Using Unitary Method Involving Both Multiplication and Division<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Factors and Multiples ▼</div>
+      <div class='tooltip'>
+        -Factors and Multiples of a Number <br>
+
+        -Types of Numbers <br>
+
+        -Prime Factors of a Number by Factor Tree Method<br>
+
+        -Tests of Divisibility<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Patterns ▼</div>
+      <div class='tooltip'>
+        -Complete the pattern<br>
+
+        -Rule for the Pattern<br>
+
+        -Find the Missing Term in the Pattern<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Rounding Numbers ▼</div>
+      <div class='tooltip'>
+        -Rounding Off Numbers <br>
+
+        -Estimating Sum<br>
+
+        -Estimating Difference<br>
+
+        -Estimating Products<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Fraction as a Part of a Whole<br>
+
+        -Fractional Numbers and Fractions<br>
+
+        -Numerator and Denominator of a Fraction<br>
+
+        -Division as Fraction<br>
+
+        -Fraction as Division<br>
+
+        -Fractions on a Number Line<br>
+
+        -Equivalent Fractions<br>
+
+        -Comparison of Fractions <br>
+
+        -Like and Unlike Fractions<br>
+
+        -Unit Fraction<br>
+
+        -Proper, Improper and Mixed fractions <br>
+
+        -Addition and Subtraction of Fractions <br>
+
+        -Word Problems on Fractions<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Decimals ▼</div>
+      <div class='tooltip'>
+        -Conversions <br>
+
+        -Pictorial Representation of a Decimal Number<br>
+
+        -Number Names of Decimal Numbers<br>
+
+        -Place Value of the Digits of a Decimal Number<br>
+
+        -Expanded Form of Decimal Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Money ▼</div>
+      <div class='tooltip'>
+        -Introduction to Currency<br>
+
+        -Express Money in Figures<br>
+
+        -Conversion of Money<br>
+
+        -Addition and Subtraction of Money <br>
+
+        -Multiplication and Division of Money <br>
+
+        -Word Problems on Money<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Time ▼</div>
+      <div class='tooltip'>
+        -Clock <br>
+
+        -Calendar<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement ▼</div>
+      <div class='tooltip'>
+        -Measurement of Length <br>
+
+        -Measurement of Weight <br>
+
+        -Measurement of Capacity<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Understand the Basic Terms in Geometry (Point, Line, Line Segment, Ray, and Plane)<br>
+
+        -Measure Line Segments<br>
+
+        -Identify and Count the Number of Line Segments<br>
+
+        -Types of Lines <br>
+
+        -Polygons <br>
+
+        -Circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Perimeter of Rectilinear Figures ▼</div>
+      <div class='tooltip'>
+        -Basic Definition of Perimeter<br>
+
+        -Perimeter of Triangle<br>
+
+        -Perimeter of a Rectangle<br>
+
+        -Perimeter of a Square<br>
+
+        -Perimeter of a Other Geometric Figures<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Solid Shapes (3-D shapes) ▼</div>
+      <div class='tooltip'>
+        -Identify Different Solid Shapes (Cuboid, Cube, Cone, Cylinder, Sphere, Prism, and Pyramids)<br>
+
+        -Vertices, Edges and Faces of Solid Objects<br>
+
+        -Net of a 3-D Shape<br>
+
+        -Tangrams<br>
+
+        -Tiling Geometrical Shapes<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Symmetry ▼</div>
+      <div class='tooltip'>
+        -Introduction to Symmetry<br>
+
+        -Identifying Mirror Halves<br>
+
+        -Symmetry Around Us<br>
+
+        -Symmetry in Geometric Figures<br>
+
+        -Symmetry in Alphabets<br>
+
+        -Symmetry in Numerals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Data Handling ▼</div>
+      <div class='tooltip'>
+        -Basic Definition of Data<br>
+
+        -Pictographs <br>
+
+        -Bar Graphs<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
