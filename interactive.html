@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkillBricks Interactive Demo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -38,7 +39,6 @@
       height: 100vh;
       padding: 20px;
       text-align: center;
-      transition: all 0.5s ease;
     }
 
     .slide.active {
@@ -113,8 +113,9 @@
   <div class="progress-container">
     <div class="progress-bar" id="progressBar"></div>
   </div>
+
   <form id="multiStepForm">
-    <!-- Slide 1: Parent and Student Name -->
+    <!-- Slide 1 -->
     <div class="slide active" id="slide1">
       <div class="icon"><i class="fas fa-user"></i></div>
       <h2>Welcome to SkillBricks!</h2>
@@ -123,7 +124,7 @@
       <button type="button" onclick="nextSlide(2)">Next</button>
     </div>
 
-    <!-- Slide 2: Email -->
+    <!-- Slide 2 -->
     <div class="slide" id="slide2">
       <div class="icon"><i class="fas fa-envelope"></i></div>
       <h2>Your Email</h2>
@@ -131,7 +132,7 @@
       <button type="button" onclick="nextSlide(3)">Next</button>
     </div>
 
-    <!-- Slide 3: Session Type -->
+    <!-- Slide 3 -->
     <div class="slide" id="slide3">
       <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
       <h2>Session Type</h2>
@@ -143,7 +144,7 @@
       <button type="button" onclick="nextSlide(4)">Next</button>
     </div>
 
-    <!-- Slide 4: Student Grade -->
+    <!-- Slide 4 -->
     <div class="slide" id="slide4">
       <div class="icon"><i class="fas fa-graduation-cap"></i></div>
       <h2>Student Grade</h2>
@@ -163,7 +164,7 @@
       <button type="button" onclick="nextSlide(5)">Next</button>
     </div>
 
-    <!-- Slide 5: Learning Status -->
+    <!-- Slide 5 -->
     <div class="slide" id="slide5">
       <div class="icon"><i class="fas fa-chart-line"></i></div>
       <h2>Current Learning Status</h2>
@@ -180,7 +181,7 @@
       <button type="button" onclick="nextSlide(6)">Next</button>
     </div>
 
-    <!-- Slide 6: Learning Goals -->
+    <!-- Slide 6 -->
     <div class="slide" id="slide6">
       <div class="icon"><i class="fas fa-bullseye"></i></div>
       <h2>Learning Goals</h2>
@@ -210,42 +211,37 @@
     const totalSlides = 6;
     const progressBar = document.getElementById("progressBar");
 
-    // Function to move to the next slide
     function nextSlide(nextSlideNumber) {
-      const currentSlide = document.getElementById(slide${current});
+      const currentSlide = document.getElementById(`slide${current}`);
       if (currentSlide) currentSlide.classList.remove('active');
-      
+
       current = nextSlideNumber;
-      const nextSlide = document.getElementById(slide${current});
+      const nextSlide = document.getElementById(`slide${current}`);
       if (nextSlide) nextSlide.classList.add('active');
-      
+
       updateProgressBar();
     }
 
-    // Function to update the progress bar
     function updateProgressBar() {
-      progressBar.style.width = ${(current / totalSlides) * 100}%;
+      progressBar.style.width = `${(current / totalSlides) * 100}%`;
     }
 
-    // Function to submit the form and show confirmation
     function submitForm(event) {
-      event.preventDefault();  // Prevent form submission
+      event.preventDefault();
 
-      // Gather all form data
       const formData = new FormData(document.getElementById("multiStepForm"));
       let formDetails = "";
       formData.forEach((value, key) => {
-        formDetails += <strong>${key}</strong>: ${value}<br>;
+        formDetails += `<strong>${key}</strong>: ${value}<br>`;
       });
 
-      // Display confirmation message
       const confirmationText = document.getElementById("confirmationText");
       confirmationText.innerHTML = "Thank you for your submission!<br><br>" + formDetails;
 
-      // Display confirmation slide (does not try to go to a non-existing slide)
-      const currentSlide = document.getElementById(slide${current});
+      const currentSlide = document.getElementById(`slide${current}`);
       if (currentSlide) currentSlide.classList.remove('active');
       document.getElementById("confirmation").classList.add('active');
+      updateProgressBar();
     }
   </script>
 </body>
