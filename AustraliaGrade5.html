@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 4 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem; /* Horizontal spacing */
+      row-gap: 2rem;    /* Vertical spacing */
+      margin-top: 2rem;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+    }
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: 0.3s;
+      width: 100%;
+    }
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+    .tooltip {
+      display: none;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+    .wrapper:hover .tooltip {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 5 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Large Numbers ▼</div>
+      <div class='tooltip'>
+        -Representation of Large Numbers <br>
+
+        -Successor and Predecessor <br>
+
+        -Place of a Digit<br>
+
+        -Compare Large Numbers<br>
+
+        -n Digit Numbers<br>
+
+        -Operations on Large Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Rounding Numbers ▼</div>
+      <div class='tooltip'>
+        -Rounding Off the Numbers <br>
+
+        -Rounding Off the Decimals <br>
+
+        -Estimating Sum<br>
+
+        -Estimating Difference<br>
+
+        -Estimating Products<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Roman Numerals (up to 500) ▼ (Optional) ▼</div>
+      <div class='tooltip'>
+        -Introduction to Roman Numerals<br>
+
+        -Write Roman Numerals for Natural Numbers<br>
+
+        -Write Natural Numbers for Roman Numerals<br>
+
+        -Meaningless Roman Numerals<br>
+
+        -Compare Roman Numerals<br>
+
+        -Operations on Roman Numerals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Factors and Multiples ▼</div>
+      <div class='tooltip'>
+        -Factors and Multiples of a Number <br>
+
+        -Tests of Divisibility <br>
+
+        -Prime Factors of a Number <br>
+
+        -HCF and LCM <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Simplification ▼</div>
+      <div class='tooltip'>
+        -Numerical Expressions Without Brackets (DMAS)<br>
+
+        -Numerical Expressions With Brackets (BODMAS)<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Like and Unlike Fractions<br>
+
+        -Unit Fraction<br>
+
+        -Proper, Improper and Mixed Fractions <br>
+
+        -Equivalent Fractions<br>
+
+        -Simplest Form of a Fraction<br>
+
+        -Compare Fractions <br>
+
+        -Addition and Subtraction of Fractions <br>
+
+        -Multiplication and Division of Fractions <br>
+
+        -Word Problems on Fractions<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Decimals ▼</div>
+      <div class='tooltip'>
+        -Reading a Decimal Number<br>
+
+        -Place Value Chart<br>
+
+        -Pictorial Representation of a Decimal Number<br>
+
+        -Expanded Form of Decimal Numbers<br>
+
+        -Like and Unlike Decimals<br>
+
+        -Comparing Decimals<br>
+
+        -Ordering Decimals<br>
+
+        -Relate Decimals and Fractions <br>
+
+        -Operations on Decimals <br>
+
+        -Multiplication and Division of Decimals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Average ▼</div>
+      <div class='tooltip'>
+        -Average<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Percentage ▼</div>
+      <div class='tooltip'>
+        -Convert a Fraction into Percentage<br>
+
+        -Convert a Percentage into Fraction<br>
+
+        -Convert Decimal into Percentage<br>
+
+        -Convert Percentage into Decimal<br>
+
+        -Percentage of a Quantity<br>
+
+        -Word Problems on Percentage<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Time ▼</div>
+      <div class='tooltip'>
+        -24-Hour Clock Time <br>
+
+        -Use of 'AM' and 'PM'<br>
+
+        -Relate Year, Month, Week, Days, Hours, Minutes, and Seconds<br>
+
+        -Addition and Subtraction of Time<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement ▼</div>
+      <div class='tooltip'>
+        -Measurement of Length <br>
+
+        -Measurement of Weight <br>
+
+        -Measurement of Capacity<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Money ▼</div>
+      <div class='tooltip'>
+        -Conversion of Money<br>
+
+        -Addition and Subtraction of Money <br>
+
+        -Multiplication and Division of Money <br>
+
+        -Word problems on Money<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Understand the Basic Terms in Geometry (Point, Line, line segment, ray, and Plane)<br>
+
+        -Angles <br>
+
+        -Types of Lines <br>
+
+        -Set Squares<br>
+
+        -Collinear and Non-Collinear Points<br>
+
+        -Triangles <br>
+
+        -Circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Perimeter ▼</div>
+      <div class='tooltip'>
+        -Understanding the Concept of Perimeter<br>
+
+        -Perimeter of a Rectilinear Figure<br>
+
+        -Perimeter of a Triangle<br>
+
+        -Perimeter of a Rectangle<br>
+
+        -Perimeter of a Square<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Area ▼</div>
+      <div class='tooltip'>
+        -Area of a Rectangle<br>
+
+        -Area of a Square<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Volume ▼</div>
+      <div class='tooltip'>
+        -Volume of a Cuboid<br>
+
+        -Volume of a Cube<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Data Handling ▼</div>
+      <div class='tooltip'>
+        -Pictographs <br>
+
+        -Bar Graphs <br>
+
+        -Pie Charts<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Exponents ▼</div>
+      <div class='tooltip'>
+        -Understanding powers of ten<br>
+
+        -Write powers of ten with exponents<br>
+
+        -Multiply a whole number by a power of ten<br>
+
+        -Multiply a decimal by a power of ten<br>
+
+        -Divide by a power of ten<br>
+
+        -Understanding exponents<br>
+
+        -Evaluate exponents<br>
+
+        -Find the missing exponents<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Problem solving ▼</div>
+      <div class='tooltip'>
+        -Make the largest and smallest possible quotient<br>
+
+        -Word Problems <br>
+
+        -Use Venn diagrams to solve problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Number sequences ▼</div>
+      <div class='tooltip'>
+        -Complete the number sequence<br>
+
+        -Compare patterns<br>
+
+        -Complete the number pattern<br>
+
+        -Number sequence: word problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Coordinate plane ▼</div>
+      <div class='tooltip'>
+        -Definition of coordinate plane<br>
+
+        -Find the coordinates<br>
+
+        -Graph points on a coordinate plane<br>
+
+        -Complete the table and draw the graph<br>
+
+        -Analyze graphed relationships<br>
+
+        -Miscellaneous problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Variable expressions ▼</div>
+      <div class='tooltip'>
+        -Write variable expressions<br>
+
+        -Evaluate variable expressions<br>
+
+        -Write variable expressions: word problems<br>
+
+        -Solve the equations <br>
+
+        -Questions on two-variables equations<br>
+
+        -Questions on graph<br>
+
+        -Graph a two-variable relationship<br>
+
+        -Write a two-variable equation<br>
+
+        -Write variable equations: word problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Probability and statistics ▼</div>
+      <div class='tooltip'>
+        -Revisiting concepts<br>
+
+        -Find the missing numbers <br>
+
+        -Interpret charts and graphs <br>
+
+        -Understanding probability<br>
+
+        -Predictions<br>
+
+        -Combinations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Symmetry and transformations ▼</div>
+      <div class='tooltip'>
+        -Line symmetry<br>
+
+        -Rotational symmetry<br>
+
+        -Reflection, rotation, and translation<br>
+
+        -Identify congruent and similar figures<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Two-dimensional figures ▼</div>
+      <div class='tooltip'>
+        -Types of polygons<br>
+
+        -Lines and its type<br>
+
+        -Various angles<br>
+
+        -Measure angles with a protractor<br>
+
+        -Properties of polygons<br>
+
+        -Venn diagrams<br>
+
+        -Parts of a circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Three-dimensional figures ▼</div>
+      <div class='tooltip'>
+        -Revisiting concepts<br>
+
+        -Nets of three-dimensional figures<br>
+
+        -Three-dimensional figures viewed from different perspectives<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Financial literacy ▼</div>
+      <div class='tooltip'>
+        -Identify types of taxes<br>
+
+        -Income and payroll taxes: understanding pay stubs<br>
+
+        -Income and payroll taxes: word problems<br>
+
+        -Sales and property taxes: word problems<br>
+
+        -Understand gross and net income<br>
+
+        -Calculate gross and net income<br>
+
+        -Identify advantages and disadvantages of payment methods<br>
+
+        -Evaluate payment methods<br>
+
+        -Reading financial records<br>
+
+        -Keeping financial records<br>
+
+        -Budget<br>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
