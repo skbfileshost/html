@@ -11,25 +11,32 @@
       font-family: 'Times New Roman', serif;
       margin: 0;
       padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
     }
+
     .map {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      column-gap: 3rem; /* Horizontal spacing */
-      row-gap: 2rem;    /* Vertical spacing */
+      column-gap: 3rem;
+      row-gap: 2rem;
       margin-top: 2rem;
     }
+
     .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 250px;
+      width: 280px;
+      transition: transform 0.3s ease;
     }
+
     .zone {
       background-color: #1e293b;
       border: 2px solid #38bdf8;
@@ -37,24 +44,32 @@
       padding: 1rem;
       text-align: center;
       cursor: default;
-      transition: 0.3s;
+      transition: background-color 0.3s ease, transform 0.3s ease;
       width: 100%;
     }
+
     .wrapper:hover .zone {
       background-color: #334155;
       transform: scale(1.05);
     }
+
     .tooltip {
-      display: none;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
       background-color: #1e40af;
       color: #fff;
-      padding: 1rem;
+      padding: 0 1rem;
       margin-top: 0.5rem;
       border-radius: 0.5rem;
       width: 100%;
     }
+
     .wrapper:hover .tooltip {
-      display: block;
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
     }
   </style>
 </head>
