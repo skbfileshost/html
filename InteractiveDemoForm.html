@@ -1,256 +1,414 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <title>SkillBricks Interactive Demo</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
-  <style>
-    body {
-      font-family: 'Times New Roman', serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      margin: 0;
-      padding: 0;
-      color: #ffffff;
-    }
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>SkillBricks Interactive Demo</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
 
-    .progress-container {
-      width: 100%;
-      background: #1a1a2e;
-      height: 10px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-    }
+        h1,h2,h3,h4,h5,h6,p,input,select,textarea,button,label {
+            font-family: 'Times New Roman', serif;
+        }
 
-    .progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      width: 0%;
-      transition: width 0.5s ease;
-    }
+        .progress-container {
+            width: 100%;
+            background: #1a1a2e;
+            height: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
 
-    .slide {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 20px;
-      text-align: center;
-      transition: all 0.5s ease;
-    }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
 
-    .slide.active {
-      display: flex;
-    }
+        .slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow-y: auto;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.5s ease;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+        .slide::-webkit-scrollbar {
+            display: none;
+        }
 
-    .icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-      color: #00c6ff;
-    }
+        .slide.active {
+            display: flex;
+        }
 
-    input, select, textarea, button {
-      font-size: 16px;
-      padding: 12px;
-      border-radius: 6px;
-      border: none;
-      width: 80%;
-      max-width: 400px;
-      margin: 10px 0;
-    }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
-    input, select, textarea {
-      background: #ffffff;
-      color: #000000;
-    }
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #00c6ff;
+        }
 
-    button {
-      background: #00c6ff;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        input,select,textarea,button {
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            width: 80%;
+            max-width: 400px;
+            margin: 10px 0;
+        }
 
-    button:hover {
-      background: #0072ff;
-    }
+        input,select,textarea {
+            background: #ffffff;
+            color: #000000;
+        }
 
-    .options {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
+        button {
+            background: #00c6ff;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    .options label {
-      background: #ffffff;
-      color: #001f3f;
-      padding: 10px 15px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
+        button:hover:enabled {
+            background: #0072ff;
+        }
 
-    .options input[type='checkbox'] {
-      display: none;
-    }
+        button:disabled {
+            background: #888;
+            cursor: not-allowed;
+        }
 
-    .options input[type='checkbox']:checked + label {
-      background: #001f3f;
-      color: #ffffff;
-      border: 2px solid #ffffff;
-    }
-  </style>
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .options label {
+            background: #ffffff;
+            color: #001f3f;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            max-width: 90%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .options input[type='checkbox'] {
+            display: none;
+        }
+
+        .options input[type='checkbox']:checked+label {
+            background: #001f3f;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .options label {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        #confirmationText {
+            text-align: left;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+    </style>
 </head>
+
 <body>
-  <div class='progress-container'>
-    <div class='progress-bar' id='progressBar'></div>
-  </div>
-  <form id='multiStepForm'>
-    <!-- Slide 1 -->
-    <div class='slide active' id='slide1'>
-      <div class='icon'><i class='fas fa-user'></i></div>
-      <h2>Welcome to SkillBricks!</h2>
-      <input type='text' style="font-family: 'Times New Roman', serif;" id='parentName' name='Parent Name' placeholder='Parent Name' required />
-      <input type='text' style="font-family: 'Times New Roman', serif;" id='studentName' name='Student Name' placeholder='Student Name' required />
-      <button type='button' style="font-family: 'Times New Roman', serif;" onclick='nextSlide(2)'>Next</button>
+    <div class='progress-container'>
+        <div class='progress-bar' id='progressBar'></div>
     </div>
+    <form id='multiStepForm'>
 
-    <!-- Slide 2 -->
-    <div class='slide' id='slide2'>
-      <div class='icon'><i class='fas fa-envelope'></i></div>
-      <h2>Your Email</h2>
-      <input type='email' style="font-family: 'Times New Roman', serif;" id='email' name='Email' placeholder='Enter your email' required />
-      <button type='button' style="font-family: 'Times New Roman', serif;"  onclick='nextSlide(3)'>Next</button>
-    </div>
+        <!-- Slide 1 -->
+        <div class='slide active' id='slide1'>
+            <div class='icon'><i class='fas fa-user'></i></div>
+            <h2>Welcome to SkillBricks!</h2>
+            <input type='text' id='parentName' name='Parent Name' placeholder='Parent Name' required />
+            <input type='text' id='studentName' name='Student Name' placeholder='Student Name' required />
+            <button type='button' class='nextBtn' onclick='nextSlide(2)' disabled>Next</button>
+        </div>
 
-    <!-- Slide 3 -->
-    <div class='slide' id='slide3'>
-      <div class='icon'><i class='fas fa-chalkboard-teacher'></i></div>
-      <h2>Session Type</h2>
-      <select id='sessionType' name='Session Type' style="font-family: 'Times New Roman', serif;" required>
-        <option value=''>Select one</option>
-        <option value='Demo Class (45 mins to 1 hour)'>Demo Class (45 mins to 1 hour)</option>
-        <option value='Parent Consultation (30 mins)'>Parent Consultation (30 mins)</option>
-      </select>
-      <button type='button' style="font-family: 'Times New Roman', serif;" onclick='nextSlide(4)'>Next</button>
-    </div>
+        <!-- Slide 2 -->
+        <div class='slide' id='slide2'>
+            <div class='icon'><i class='fas fa-envelope'></i></div>
+            <h2>Your Email</h2>
+            <input type='email' id='email' name='Email' placeholder='Enter your email' required />
+            <p id='emailError' style='color: red; display: none;'>Please enter a valid email address.</p>
+            <div>
+                <button type='button' onclick='prevSlide(1)'>Back</button>
+                <button type='button' class='nextBtn' onclick='nextSlide(3)' disabled>Next</button>
+            </div>
+        </div>
 
-    <!-- Slide 4 -->
-    <div class='slide' id='slide4'>
-      <div class='icon'><i class='fas fa-graduation-cap'></i></div>
-      <h2>Student Grade</h2>
-      <select id='grade' name='Grade' style="font-family: 'Times New Roman', serif;" required>
-        <option value=''>Select an option</option>
-        <option value='1'>1st Grade</option>
-        <option value='2'>2nd Grade</option>
-        <option value='3'>3rd Grade</option>
-        <option value='4'>4th Grade</option>
-        <option value='5'>5th Grade</option>
-        <option value='6'>6th Grade</option>
-        <option value='7'>7th Grade</option>
-        <option value='8'>8th Grade</option>
-        <option value='9'>9th Grade</option>
-        <option value='10'>10th Grade</option>
-      </select>
-      <button type='button' style="font-family: 'Times New Roman', serif;"  onclick='nextSlide(5)'>Next</button>
-    </div>
+        <!-- Slide 3 (NEW - Country or Region) -->
+        <div class='slide' id='slide3'>
+            <div class='icon'><i class='fas fa-globe'></i></div>
+            <h2>Country or Region</h2>
+            <select id='countryRegion' name='Country or Region' required>
+                <option value=''>Select your country or region</option>
+                <option value='Australia'>Australia</option>
+                <option value='India'>India</option>
+                <option value='USA'>USA</option>
+                <option value='UK'>UK</option>
+                <option value='Middle East'>Middle East</option>
+                <option value='Other'>Other</option>
+            </select>
+            <div>
+                <button type='button' onclick='prevSlide(2)'>Back</button>
+                <button type='button' class='nextBtn' onclick='nextSlide(4)' disabled>Next</button>
+            </div>
+        </div>
 
-    <!-- Slide 5 -->
-    <div class='slide' id='slide5'>
-      <div class='icon'><i class='fas fa-chart-line'></i></div>
-      <h2>Current Learning Status</h2>
-      <p>How would you best describe your child's current learning experience?</p>
-      <div class='options'>
-        <input type='checkbox' id='status1' name='Learning Status' value='Thriving and Excelling'>
-        <label for='status1'>Thriving and Excelling</label>
-        <input type='checkbox' id='status2' name='Learning Status' value='Doing Well, but Ready for More Challenge'>
-        <label for='status2'>Doing Well, but Ready for More Challenge</label>
-        <input type='checkbox' id='status3' name='Learning Status' value='Experiencing Some Difficulties'>
-        <label for='status3'>Experiencing Some Difficulties</label>
-        <input type='checkbox' id='status4' name='Learning Status' value='Requires Individualized Support'>
-        <label for='status4'>Requires Individualized Support</label>
-        <input type='checkbox' id='status5' name='Learning Status' value='Unsure / Would Like Guidance'>
-        <label for='status5'>Unsure / Would Like Guidance</label>
-      </div>
-      <button type='button' style="font-family: 'Times New Roman', serif;" onclick='nextSlide(6)'>Next</button>
-    </div>
+        <!-- Slide 4 -->
+        <div class='slide' id='slide4'>
+            <div class='icon'><i class='fas fa-chalkboard-teacher'></i></div>
+            <h2>Session Type</h2>
+            <select id='sessionType' name='Session Type' required>
+                <option value=''>Select one</option>
+                <option value='Demo Class (45 mins to 1 hour)'>Demo Class (45 mins to 1 hour)</option>
+                <option value='Parent Consultation (30 mins)'>Parent Consultation (30 mins)</option>
+            </select>
+            <div>
+                <button type='button' onclick='prevSlide(3)'>Back</button>
+                <button type='button' class='nextBtn' onclick='nextSlide(5)' disabled>Next</button>
+            </div>
+        </div>
 
-    <!-- Slide 6 -->
-    <div class='slide' id='slide6'>
-      <div class='icon'><i class='fas fa-bullseye'></i></div>
-      <h2>Learning Goals</h2>
-      <p>What areas of growth or development would you like to focus on for your child?</p>
-      <div class='options' id='goalsSection'>
-        <input type='checkbox' id='goal1' name='Learning Goals' value='Building Critical Thinking & Problem-Solving Skills'>
-        <label for='goal1'>Building Critical Thinking & Problem-Solving Skills</label>
-        <input type='checkbox' id='goal2' name='Learning Goals' value='Strengthening Creativity and Imagination'>
-        <label for='goal2'>Strengthening Creativity and Imagination</label>
-        <input type='checkbox' id='goal3' name='Learning Goals' value='Improving Focus and Attention'>
-        <label for='goal3'>Improving Focus and Attention</label>
-        <input type='checkbox' id='goal4' name='Learning Goals' value='Enhancing Social & Team Collaboration Skills'>
-        <label for='goal4'>Enhancing Social & Team Collaboration Skills</label>
-        <input type='checkbox' id='goal5' name='Learning Goals' value='Boosting Confidence and Communication'>
-        <label for='goal5'>Boosting Confidence and Communication</label>
-        <input type='checkbox' id='goal6' name='Learning Goals' value='Developing Resilience and Perseverance'>
-        <label for='goal6'>Developing Resilience and Perseverance</label>
-      </div>
-      <button type='button' style="font-family: 'Times New Roman', serif;"  onclick='submitForm(event)'>Submit</button>
-    </div>
+        <!-- Slide 5 -->
+        <div class='slide' id='slide5'>
+            <div class='icon'><i class='fas fa-graduation-cap'></i></div>
+            <h2>Student Grade</h2>
+            <select id='grade' name='Grade' required>
+                <option value=''>Select an option</option>
+                <option value='1'>1st Grade</option>
+                <option value='2'>2nd Grade</option>
+                <option value='3'>3rd Grade</option>
+                <option value='4'>4th Grade</option>
+                <option value='5'>5th Grade</option>
+                <option value='6'>6th Grade</option>
+                <option value='7'>7th Grade</option>
+                <option value='8'>8th Grade</option>
+                <option value='9'>9th Grade</option>
+                <option value='10'>10th Grade</option>
+            </select>
+            <div>
+                <button type='button' onclick='prevSlide(4)'>Back</button>
+                <button type='button' class='nextBtn' onclick='nextSlide(6)' disabled>Next</button>
+            </div>
+        </div>
 
-    <!-- Confirmation -->
-    <div class='slide' id='confirmation'>
-      <div class='icon'><i class='fas fa-check-circle'></i></div>
-      <h2>Thank you for your submission!</h2>
-      <p id='confirmationText'></p>
-    </div>
-  </form>
+        <!-- Slide 6 -->
+        <div class='slide' id='slide6'>
+            <div class='icon'><i class='fas fa-chart-line'></i></div>
+            <h2>Current Learning Status</h2>
+            <p>How would you best describe your child's current learning experience?</p>
+            <div class='options' id='statusSection'>
+                <input type='checkbox' id='status1' name='Learning Status' value='Thriving and Excelling'>
+                <label for='status1'>Thriving and Excelling</label>
+                <input type='checkbox' id='status2' name='Learning Status' value='Doing Well, but Ready for More Challenge'>
+                <label for='status2'>Doing Well, but Ready for More Challenge</label>
+                <input type='checkbox' id='status3' name='Learning Status' value='Experiencing Some Difficulties'>
+                <label for='status3'>Experiencing Some Difficulties</label>
+                <input type='checkbox' id='status4' name='Learning Status' value='Requires Individualized Support'>
+                <label for='status4'>Requires Individualized Support</label>
+                <input type='checkbox' id='status5' name='Learning Status' value='Unsure / Would Like Guidance'>
+                <label for='status5'>Unsure / Would Like Guidance</label>
+            </div>
+            <div>
+                <button type='button' onclick='prevSlide(5)'>Back</button>
+                <button type='button' class='nextBtn' onclick='nextSlide(7)' disabled>Next</button>
+            </div>
+        </div>
 
-  <script>
-    let current = 1;
-    const totalSlides = 6;
-    const progressBar = document.getElementById('progressBar');
+        <!-- Slide 7 -->
+        <div class='slide' id='slide7'>
+            <div class='icon'><i class='fas fa-bullseye'></i></div>
+            <h2>Learning Goals</h2>
+            <p>What areas of growth or development would you like to focus on for your child?</p>
+            <div class='options' id='goalsSection'>
+                <input type='checkbox' id='goal1' name='Learning Goals' value='Building Critical Thinking & Problem-Solving Skills'>
+                <label for='goal1'>Building Critical Thinking & Problem-Solving Skills</label>
+                <input type='checkbox' id='goal2' name='Learning Goals' value='Strengthening Creativity and Imagination'>
+                <label for='goal2'>Strengthening Creativity and Imagination</label>
+                <input type='checkbox' id='goal3' name='Learning Goals' value='Improving Focus and Attention'>
+                <label for='goal3'>Improving Focus and Attention</label>
+                <input type='checkbox' id='goal4' name='Learning Goals' value='Fill Basic Learning Gaps'>
+                <label for='goal4'>Fill Basic Learning Gaps</label>
+                <input type='checkbox' id='goal6' name='Learning Goals' value='Handling Exam Pressure and Anxiety'>
+                <label for='goal6'>Handling Exam Pressure and Anxiety</label>
+            </div>
+            <div>
+                <button type='button' onclick='prevSlide(6)'>Back</button>
+                <button type='button' class='nextBtn' onclick='submitForm(event)' disabled>Submit</button>
+            </div>
+        </div>
 
-    function nextSlide(nextSlideNumber) {
-      const currentSlide = document.getElementById('slide' + current);
-      if (currentSlide) currentSlide.classList.remove('active');
+        <!-- Confirmation -->
+        <div class='slide' id='confirmation'>
+            <div class='icon'><i class='fas fa-check-circle'></i></div>
+            <h2>Thank you! Our email will find its way to you shortly—no spam, just the learning goodness.</h2>
+            <p id='confirmationText'></p>
+        </div>
 
-      current = nextSlideNumber;
-      const nextSlide = document.getElementById('slide' + current);
-      if (nextSlide) nextSlide.classList.add('active');
+    </form>
 
-      updateProgressBar();
-    }
+    <script>
+        let current = 1;
+        const totalSlides = 7;
+        const progressBar = document.getElementById('progressBar');
 
-    function updateProgressBar() {
-      progressBar.style.width = (current / totalSlides) * 100 + '%';
-    }
+        function nextSlide(nextSlideNumber) {
+            document.getElementById('slide' + current).classList.remove('active');
+            current = nextSlideNumber;
+            document.getElementById('slide' + current).classList.add('active');
+            updateProgressBar();
+        }
 
-    function submitForm(event) {
-      event.preventDefault();
+        function prevSlide(prevSlideNumber) {
+            document.getElementById('slide' + current).classList.remove('active');
+            current = prevSlideNumber;
+            document.getElementById('slide' + current).classList.add('active');
+            updateProgressBar();
+        }
 
-      const form = document.getElementById('multiStepForm');
-      const formData = new FormData(form);
-      let formDetails = '';
+        function updateProgressBar() {
+            progressBar.style.width = (current / totalSlides) * 100 + '%';
+        }
 
-      formData.forEach((value, key) => {
-        formDetails += `<strong>${key}</strong>: ${value}<br>`;
-      });
+        function validateSlide(slide) {
+            const inputs = slide.querySelectorAll('input, select, textarea');
+            const groupedCheckboxes = {};
 
-      document.getElementById('slide' + current).classList.remove('active');
-      document.getElementById('confirmationText').innerHTML = formDetails;
-      document.getElementById('confirmation').classList.add('active');
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    if (!groupedCheckboxes[input.name]) {
+                        groupedCheckboxes[input.name] = [];
+                    }
+                    groupedCheckboxes[input.name].push(input);
+                }
+            });
 
-      updateProgressBar();
-    }
-  </script>
+            for (const group in groupedCheckboxes) {
+                if (!groupedCheckboxes[group].some(cb => cb.checked)) return false;
+            }
+
+            for (const input of inputs) {
+                if (input.type !== 'checkbox' && input.required && input.value.trim() === '') {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function bindValidation(slide) {
+            const inputs = slide.querySelectorAll('input, select, textarea');
+            const button = slide.querySelector('.nextBtn');
+
+            const updateButtonState = () => {
+                let isValid = validateSlide(slide);
+
+                if (slide.id === 'slide2') {
+                    const emailInput = document.getElementById('email');
+                    const emailError = document.getElementById('emailError');
+                    const emailValue = emailInput.value.trim();
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (!emailRegex.test(emailValue)) {
+                        isValid = false;
+                        emailError.style.display = 'block';
+                    } else {
+                        emailError.style.display = 'none';
+                    }
+                }
+
+                button.disabled = !isValid;
+            };
+
+            inputs.forEach(input => {
+                input.addEventListener('input', updateButtonState);
+                input.addEventListener('change', updateButtonState);
+            });
+
+            updateButtonState();
+        }
+
+        document.querySelectorAll('.slide').forEach(bindValidation);
+
+        function submitForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('multiStepForm');
+            const formData = new FormData(form);
+            const formEntries = {};
+
+            formData.forEach((value, key) => {
+                if (formEntries[key]) {
+                    formEntries[key].push(value);
+                } else {
+                    formEntries[key] = [value];
+                }
+            });
+
+            let formDetails = '';
+            for (const key in formEntries) {
+                formDetails += `<strong>${key}</strong>: ${formEntries[key].join(', ')}<br>`;
+            }
+
+            document.getElementById('slide' + current).classList.remove('active');
+            document.getElementById('confirmationText').innerHTML = formDetails;
+            document.getElementById('confirmation').classList.add('active');
+            current = totalSlides + 1;
+            updateProgressBar();
+
+            setTimeout(() => {
+                form.reset();
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                document.getElementById('confirmation').classList.remove('active');
+                current = 1;
+                document.getElementById('slide1').classList.add('active');
+                updateProgressBar();
+                document.querySelectorAll('.slide').forEach(bindValidation);
+            }, 7000);
+        }
+    </script>
 </body>
 </html>
