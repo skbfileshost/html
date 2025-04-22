@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 1 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 7 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Integers ▼</div>
+      <div class='tooltip'>
+        -Revisiting Basics<br>
+
+        -Operations on Integers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Revisiting Basics<br>
+
+        -Equivalent Fractions<br>
+
+        -Comparing Fractions <br>
+
+        -Operations on Fractions<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Decimals ▼</div>
+      <div class='tooltip'>
+        -Revisiting Basics<br>
+
+        -Like, Unlike And Equivalent Decimals<br>
+
+        -Ordering And Comparing Decimals<br>
+
+        -Relate Decimals and Fractions <br>
+
+        -Addition and Subtraction of Decimals <br>
+
+        -Multiplication and Division of Decimals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Rational Numbers ▼</div>
+      <div class='tooltip'>
+        -Understanding Rational Numbers<br>
+
+        -Equivalent Rational Numbers<br>
+
+        -Comparison of Rational Numbers<br>
+
+        -Representation of Rational Numbers on the Real Line<br>
+
+        -Addition and Subtraction of Rational Numbers <br>
+
+        -Multiplication and Division of Rational Numbers <br>
+
+        -Rational Numbers Lying Between Two Rational Numbers<br>
+
+        -Simplifying Rational Numbers<br>
+
+        -Word Problems on Rational Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Exponents ▼</div>
+      <div class='tooltip'>
+        -Introduction to Exponents<br>
+
+        -Exponent of a Rational Number<br>
+
+        -Express Rational Numbers in Exponential Form<br>
+
+        -Solving Expressions Involving Exponents<br>
+
+        -Laws of Exponents<br>
+
+        -Finding the Unknown from the Given Exponential Equation<br>
+
+        -Standard Form of Large Numbers<br>
+
+        -Standard Form of Small Numbers<br>
+
+        -Expanded Form of Large Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Ratio and Proportion ▼</div>
+      <div class='tooltip'>
+        -Ratio <br>
+
+        -Proportion<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Unitary Method ▼</div>
+      <div class='tooltip'>
+        -Problems on Direct Variation<br>
+
+        -Problems on Inverse Variation<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Percentage ▼</div>
+      <div class='tooltip'>
+        -Conversions <br>
+
+        -Percentage of a Quantity<br>
+
+        -Solving Expressions involving Percentages<br>
+
+        -Word Problems on Percentage<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Profit and Loss ▼</div>
+      <div class='tooltip'>
+        -Terms Related to Profit and Loss<br>
+
+        -Problems on Finding the Gain/Loss and Gain%/Loss%<br>
+
+        -Problems on Finding the SP of the Article<br>
+
+        -Problems on Finding the CP of the Article<br>
+
+        -Problems on Finding the Number of Articles<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Simple Interest ▼</div>
+      <div class='tooltip'>
+        -Problems on Calculating the Simple Interest<br>
+
+        -Problems on Calculating the Rate Percent<br>
+
+        -Problems on Calculating Time Period<br>
+
+        -Problems on Calculating the Principal<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Algebraic Expressions ▼</div>
+      <div class='tooltip'>
+        -Variables and Constants<br>
+
+        -Types of Algebraic Expressions<br>
+
+        -Finding the Value of an Algebraic Expression<br>
+
+        -Operations on Algebraic Expressions <br>
+
+        -Simplifying Algebraic Expression by Eliminating the Grouping Symbols<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Equations in One Variable ▼</div>
+      <div class='tooltip'>
+        -Solving Linear Equations by the Method of Transposition<br>
+
+        -Word Problems Based on Linear Equations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Mensuration ▼</div>
+      <div class='tooltip'>
+        -Standard Units of Area<br>
+
+        -Area and Perimeter of a Square<br>
+
+        -Area and Perimeter of a Rectangle<br>
+
+        -Area between Two Rectangles<br>
+
+        -Area and Perimeter of Triangles<br>
+
+        -Area and Perimeter of Parallelogram and Rhombus<br>
+
+        -Circumference and Area of a Circle<br>
+
+        -Area Enclosed Between Two Different Shapes<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Lines and Angles <br>
+
+        -Triangles <br>
+
+        -Congruence<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Reflection and Rotational Symmetry ▼</div>
+      <div class='tooltip'>
+        -Linear Symmetry <br>
+
+        -Rotational Symmetry<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Three-Dimensional Shapes ▼</div>
+      <div class='tooltip'>
+        -Identifying 3-D Shapes<br>
+
+        -Faces, Edges and Vertices of 3-D Shapes (Cuboid, Cube, Cone, Cylinder, and Sphere)<br>
+
+        -Net of a 3-D Shape<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Probability ▼</div>
+      <div class='tooltip'>
+        -Probability<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Data Handling ▼</div>
+      <div class='tooltip'>
+        -Tabular Representation of Data<br>
+
+        -Mean, Median, and Mode <br>
+
+        -Bar Graphs<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
