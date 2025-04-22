@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 9 - India</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 9 - India</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Number Systems ▼</div>
+      <div class='tooltip'>
+        -Rational and Irrational Numbers <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Real Numbers ▼</div>
+      <div class='tooltip'>
+        -Operations on Real Numbers <br>
+
+        -Rationalization of Real Numbers<br>
+
+        -Exponents of Real Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Polynomials ▼</div>
+      <div class='tooltip'>
+        -Identify Polynomial Expressions<br>
+
+        -Identify the Degree of a Polynomial<br>
+
+        -Identify Coefficients in a Polynomial<br>
+
+        -Evaluate Polynomials<br>
+
+        -Zeros of a Polynomial<br>
+
+        -Square of Binomials<br>
+
+        -Remainder Theorem<br>
+
+        -Factor Theorem<br>
+
+        -Factorization of Polynomials <br>
+
+        -Polynomials in Equations<br>
+
+        -Evaluate Polynomials Using Algebraic Identities<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Coordinate Geometry ▼</div>
+      <div class='tooltip'>
+        -Understand the Terms Related to Coordinate Geometry<br>
+
+        -Identify the Coordinates of a Point on the Cartesian Plane<br>
+
+        -Identify the Coordinates of the Points on the X-axis, Y-axis, and the Origin<br>
+
+        -Identify the Quadrant of a Point<br>
+
+        -Draw the Graphs of Linear Equations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Equations in Two Variables ▼</div>
+      <div class='tooltip'>
+        -Verify a Solution to a Linear Equation in Two Variables<br>
+
+        -Find the Unknown Variable When the Equation of the Line and Several Conditions are Given<br>
+
+        -Draw Graph of Linear Equations and Find the Unknown Variable<br>
+
+        -Draw Graph of Some Special Type of Linear Equations<br>
+
+        -Word Problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Introduction to Euclid's Geometry ▼</div>
+      <div class='tooltip'>
+        -Understanding Points, Line Segments, Rays, Lines, and Planes<br>
+
+        -Euclid's Axioms and Postulates<br>
+
+        -Parallel, Concurrent and Intersecting Lines<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Lines and Angles ▼</div>
+      <div class='tooltip'>
+        -Understanding Basic Terms<br>
+
+        -Angles Around a Point<br>
+
+        -Complementary and Supplementary Pairs of Angles<br>
+
+        -Adjacent Angles, Vertically Opposite Angles, and Linear Pair of Angles<br>
+
+        -Parallel Lines, Transversal, and Angles Formed<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Triangles ▼</div>
+      <div class='tooltip'>
+        -Classification of Triangles on the Basis of its Sides and Angles<br>
+
+        -Theorems and Problems Related to Side and Angle Measures of Triangles<br>
+
+        -Congruence of Triangles <br>
+
+        -Inequalities in a Triangle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Quadrilaterals ▼</div>
+      <div class='tooltip'>
+        -Understand the Concept of Quadrilaterals and Related Terms<br>
+
+        -Theorems and Problems Related to the Angles of a Quadrilateral<br>
+
+        -Theorems and Problems Related to Parallelograms<br>
+
+        -Intercept Theorem and Midpoint Theorem <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Areas of Parallelograms and Triangles ▼</div>
+      <div class='tooltip'>
+        -Area of a Triangle<br>
+
+        -Area of a Parallelogram<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Circles ▼</div>
+      <div class='tooltip'>
+        -Terms Related to Circles<br>
+
+        -Theorems and Problems Related to Chord Properties of Circles<br>
+
+        -Theorems and Problems Related to Angles Subtended by Arcs/Chords<br>
+
+        -Theorems and Problems Related to Cyclic Quadrilaterals<br>
+
+        -Problems Related to Circumcircles and In-circles<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Constructions ▼</div>
+      <div class='tooltip'>
+        -Bisector of a Line Segment<br>
+
+        -Construction of Angles<br>
+
+        -Construction of Triangles<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Heron's Formula ▼</div>
+      <div class='tooltip'>
+        -Area of a Triangle Using Heron's Formula<br>
+
+        -Applications of Heron's Formula<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Surface Areas and Volumes ▼</div>
+      <div class='tooltip'>
+        -Volume and Surface Area of Cuboids and Cubes<br>
+
+        -Volume and Surface Area of Cylinders<br>
+
+        -Volume and Surface Area of Circular Cones<br>
+
+        -Volume and Surface Area of Spheres, Hemispheres and Spherical Shells<br>
+
+        -Mixed Problems on Volume and Surface Area<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Statistics ▼</div>
+      <div class='tooltip'>
+        -Frequency Distribution of an Ungrouped Data<br>
+
+        -Cumulative Frequency Table of an Ungrouped Data<br>
+
+        -Bar Graph <br>
+
+        -Histogram <br>
+
+        -Frequency Polygons <br>
+
+        -Histograms and Frequency Polygons on a Single Graph<br>
+
+        -Mean, Median, and Mode <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Probability ▼</div>
+      <div class='tooltip'>
+        -Calculate Probability for Events in Random Experiments<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
