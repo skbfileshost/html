@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 10 - India</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 10 - India</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Real Numbers ▼</div>
+      <div class='tooltip'>
+        -Euclid's Division Lemma<br>
+
+        -The Fundamental Theorem of Arithmetic<br>
+
+        -Revisiting Irrational Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Polynomials ▼</div>
+      <div class='tooltip'>
+        -Zeros of a Quadratic Polynomial and Relation Between Its Zeroes and Coefficients<br>
+
+        -Zeros of a Cubic Polynomial and Relation Between Its Zeroes and Coefficients<br>
+
+        -Division Algorithm for Polynomials<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Pair of Linear Equations in Two Variables ▼</div>
+      <div class='tooltip'>
+        -Forming Linear Equations Under the Given Conditions<br>
+
+        -Solutions of a Linear Equation<br>
+
+        -Solving a System of Simultaneous Linear Equations <br>
+
+        -Conditions for Solvability of a System of Linear Equations <br>
+
+        -Word Problems on Linear Equations in two variables<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Quadratic Equations ▼</div>
+      <div class='tooltip'>
+        -Identify Quadratic Equations<br>
+
+        -Verify Solutions of a Quadratic Equation<br>
+
+        -Solve Quadratic Equations by Factorization<br>
+
+        -Solve Quadratic Equations by Completing the Square<br>
+
+        -Solve Quadratic Equations by Using Quadratic Formula<br>
+
+        -Nature of Roots of a Quadratic Equation<br>
+
+        -Word Problems on Quadratic Equations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Arithmetic Progressions ▼</div>
+      <div class='tooltip'>
+        -Tell if a Progression is an Arithmetic Progression (AP)<br>
+
+        -Find the First Term, Common Difference or the Next Term in an Arithmetic Progression (AP)<br>
+
+        -Find the Unknown Variable(s) in an Arithmetic Progression (AP)<br>
+
+        -Find the Numbers in AP Under Specified Conditions<br>
+
+        -General Term (nth Term) of an Arithmetic Progression (AP) <br>
+
+        -General Term (nth Term) from the End of an Arithmetic Progression (AP)<br>
+
+        -Arithmetic Mean<br>
+
+        -Sum of n Terms of an Arithmetic Progression (AP) <br>
+
+        -Word Problems on Arithmetic Progressions (AP)<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Triangles ▼</div>
+      <div class='tooltip'>
+        -Basic Proportionality Theorem (Thales's Theorem) and its Applications<br>
+
+        -Angle-Bisector Theorem and its Applications<br>
+
+        -Similar Triangles <br>
+
+        -Pythagoras Theorem, Related Results and Problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Coordinate Geometry ▼</div>
+      <div class='tooltip'>
+        -Distance Between Two Points <br>
+
+        -Section Formula and Midpoint Formula<br>
+
+        -Centroid of a Triangle<br>
+
+        -Area of a Triangle<br>
+
+        -Area of a Parallelogram<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Introduction to Trigonometry ▼</div>
+      <div class='tooltip'>
+        -Trigonometric Ratios <br>
+
+        -Trigonometric Ratios of Angles 0, 30, 45, 60, and 90 degrees<br>
+
+        -Trigonometric Ratios of Complementary Angles<br>
+
+        -Trigonometric Identities <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Some Applications of Trigonometry ▼</div>
+      <div class='tooltip'>
+        -Heights and Distances<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Circles ▼</div>
+      <div class='tooltip'>
+        -Theorems and Results Related to Tangents of Circles<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Constructions ▼</div>
+      <div class='tooltip'>
+        -Division of a Line Segment<br>
+
+        -Construction of Triangles<br>
+
+        -Construction of Tangents to a Circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Areas Related to Circle ▼</div>
+      <div class='tooltip'>
+        -Area and Circumference of a Circle<br>
+
+        -Area of a Sector, Segment and Length of the Arc<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Surface Areas and Volumes ▼</div>
+      <div class='tooltip'>
+        -Volume and Surface Area of Solids<br>
+
+        -Volume and Surface Area of Conical Frustum<br>
+
+        -Volume and Surface Area of Combination of Solids<br>
+
+        -Mixed Problems on Volume and Surface Area<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Statistics ▼</div>
+      <div class='tooltip'>
+        -Mean of Grouped Data <br>
+
+        -Median for Grouped Data <br>
+
+        -Mode of Grouped Data <br>
+
+        -Miscellaneous Questions on Mean, Mode and Median of Grouped Data<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Probability ▼</div>
+      <div class='tooltip'>
+        -Card Problems<br>
+
+        -Dice Problems<br>
+
+        -Coin Problems<br>
+
+        -Other Problems<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
