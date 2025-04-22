@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 1 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 10 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Real numbers ▼</div>
+      <div class='tooltip'>
+        -Euclid's Division Lemma<br>
+
+        -Fundamental Theorem of Arithmetic, LCM, HCF<br>
+
+        -Rational Numbers<br>
+
+        -Irrational Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Polynomials ▼</div>
+      <div class='tooltip'>
+        -Zeros of a Quadratic Polynomial<br>
+
+        -Zeros of a Cubic Polynomial<br>
+
+        -Division Algorithm for Polynomials<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Equations in Two Variables ▼</div>
+      <div class='tooltip'>
+        -Forming Linear Equations Under the Given Conditions<br>
+
+        -Solutions of a Linear Equation<br>
+
+        -Solving a System of Simultaneous Linear Equations <br>
+
+        -Conditions for Solvability of a System of Linear Equations <br>
+
+        -Word Problems on Linear Equations in Two Variables<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Triangles ▼</div>
+      <div class='tooltip'>
+        -Basic Proportionality Theorem (Thales's Theorem) and its Applications<br>
+
+        -Angle-Bisector Theorem and its Applications<br>
+
+        -Similar Triangles <br>
+
+        -Pythagoras Theorem<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Trigonometry ▼</div>
+      <div class='tooltip'>
+        -Trigonometric Ratios <br>
+
+        -Trigonometric Ratios of Angles 0, 30, 45, 60, and 90 degrees<br>
+
+        -Trigonometric Ratios of Complementary Angles<br>
+
+        -Trigonometric Identities <br>
+
+        -Heights and Distances<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Statistics and Probability ▼</div>
+      <div class='tooltip'>
+        -Statistics <br>
+
+        -Probability<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Quadratic Equations ▼</div>
+      <div class='tooltip'>
+        -Identify Quadratic Equations<br>
+
+        -Solutions of a Quadratic Equation<br>
+
+        -Solve Quadratic Equations by Factorization<br>
+
+        -Solve Quadratic Equations by Completing the Square<br>
+
+        -Solve Quadratic Equations by Using Quadratic Formula<br>
+
+        -Nature of Roots of a Quadratic Equation<br>
+
+        -Word Problem on Quadratic Equations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Arithmetic Progression (AP) ▼</div>
+      <div class='tooltip'>
+        -Tell if a Progression is an Arithmetic Progression (AP)<br>
+
+        -Find the Unknown Variable(s) in an AP<br>
+
+        -Find the Numbers in AP Under Specified Conditions<br>
+
+        -General Term (nth Term) of an AP <br>
+
+        -General Term (nth Term) from the End of an AP<br>
+
+        -Arithmetic Mean<br>
+
+        -Sum of n Terms of an Arithmetic Progression (AP) <br>
+
+        -Word Problems on Arithmetic Progressions (AP<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Circles ▼</div>
+      <div class='tooltip'>
+        -Theorems and Results Related to Tangents of Circles<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Coordinate Geometry ▼</div>
+      <div class='tooltip'>
+        -Distance Formula <br>
+
+        -Section Formula and Midpoint Formula<br>
+
+        -Centroid of a Triangle<br>
+
+        -Area of Triangle and Parallelogram<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Mensuration ▼</div>
+      <div class='tooltip'>
+        -Perimeter and Area of Plane Figures <br>
+
+        -Surface Areas and Volumes<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
