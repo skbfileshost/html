@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 3 - India</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 3 - India</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Numbers ▼</div>
+      <div class='tooltip'>
+        -Representation of Numbers <br>
+
+        -Face Value and Place Value <br>
+
+        -Numbers in Expanded Form <br>
+
+        -Successor and Predecessor <br>
+
+        -Skip Counting<br>
+
+        -Comparison of numbers <br>
+
+        -Ascending Order and Descending Order <br>
+
+        -Forming Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Roman Numerals ▼</div>
+      <div class='tooltip'>
+        -Introduction to Roman Numerals<br>
+
+        -Write Roman Numerals for Hindu-Arabic Numerals<br>
+
+        -Write Hindu-Arabic Numerals for Roman Numerals<br>
+
+        -Meaningless Roman Numerals<br>
+
+        -Compare Roman Numerals<br>
+
+        -Operations on Roman Numerals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Addition ▼</div>
+      <div class='tooltip'>
+        -Addendum and Sum<br>
+
+        -Addition Without Carrying <br>
+
+        -Addition with Carrying <br>
+
+        -Properties of Addition <br>
+
+        -Word Problems on Addition<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Subtraction ▼</div>
+      <div class='tooltip'>
+        -Subtraction Without Borrowing <br>
+
+        -Subtraction With Borrowing <br>
+
+        -Properties of Subtraction<br>
+
+        -Word Problems on Subtraction<br>
+
+        -Word Problems on Addition and Subtraction<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Multiplication ▼</div>
+      <div class='tooltip'>
+        -Multiplication as Repeated Addition<br>
+
+        -Multiplication Tables from 2 to 10<br>
+
+        -Multiplication By 1-Digit Numbers <br>
+
+        -Multiplication Tables from 11 to 20<br>
+
+        -Multiplication By 2-Digit Numbers <br>
+
+        -Multiplication by 10,100, and 1000<br>
+
+        -Multiplication by 20,30,40....90<br>
+
+        -Multiplication by 200,300,400....900<br>
+
+        -Properties of Multiplication <br>
+
+        -Word Problems on Multiplication <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Division ▼</div>
+      <div class='tooltip'>
+        -Division as Distribution<br>
+
+        -Division as Forming Groups<br>
+
+        -Division as Repeated Subtraction<br>
+
+        -Division on the Number Line<br>
+
+        -Relation Between Multiplication and Division<br>
+
+        -Divisor, Quotient, Dividend and Remainder<br>
+
+        -Properties of Division <br>
+
+        -Division Without Remainder using Long Division Method <br>
+
+        -Division With Remainder using Long Division Method <br>
+
+        -Division by 10<br>
+
+        -Word Problems on Division (Without Remainder) <br>
+
+        -Word Problems on Division (With Remainder)<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Money ▼</div>
+      <div class='tooltip'>
+        -Currency<br>
+
+        -Express Money in Words<br>
+
+        -Express Money in Figures<br>
+
+        -Convert to Paise <br>
+
+        -Convert from Paise <br>
+
+        -Addition of Money <br>
+
+        -Subtraction of money <br>
+
+        -Multiplication of Money by a Whole Number<br>
+
+        -Word problems on money <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Fraction as a Part of a Whole<br>
+
+        -Fractional Numbers and Fractions<br>
+
+        -Numerator and Denominator of a Fraction<br>
+
+        -Fractional Part of a Collection<br>
+
+        -Word Problems on Fractions<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement of Length ▼</div>
+      <div class='tooltip'>
+        -Measures of Length<br>
+
+        -Devices to Measure Length<br>
+
+        -Conversion of Metres into Centimetres and Vice Versa<br>
+
+        -Conversion of Kilometres into Metres and Vice Versa<br>
+
+        -Compare Metric Units of Length<br>
+
+        -Addition of Lengths <br>
+
+        -Subtraction of Lengths <br>
+
+        -Word Problems on Length <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement of Weight ▼</div>
+      <div class='tooltip'>
+        -Metric Units of Weight<br>
+
+        -Weighing Objects <br>
+
+        -Conversion of Grams into Kilograms<br>
+
+        -Conversion of Kilograms into Grams<br>
+
+        -Compare Metric Units of Weight<br>
+
+        -Addition of Weights <br>
+
+        -Subtraction of Weights <br>
+
+        -Word Problems on Weight <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement of Capacity/Volume ▼</div>
+      <div class='tooltip'>
+        -Metric Units of Capacity/Volume<br>
+
+        -Measuring Capacity/Volume Using Reference Containers<br>
+
+        -Conversio of Litres into Millilitres<br>
+
+        -Convert Millilitres into Litres<br>
+
+        -Compare Metric Units of Capacity/Volume<br>
+
+        -Addition of Capacities/Volumes <br>
+
+        -Subtraction of Capacities/Volumes <br>
+
+        -Word Problems on Capacity/Volume <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Time ▼</div>
+      <div class='tooltip'>
+        -Clocks <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Calendar ▼</div>
+      <div class='tooltip'>
+        -Days, Weeks, Months and Years <br>
+
+        -Dates <br>
+
+        -Word Problems on Calendar<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Point, Line Segment, Line and Ray <br>
+
+        -Plane Shapes (Triangle, Quadrilateral, Rectangle, Square, and Circle) <br>
+
+        -Solids <br>
+
+        -Symmetry<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Pictograph ▼</div>
+      <div class='tooltip'>
+        -Drawing a Pictograph for a Given Infomation<br>
+
+        -Reading and Interpreting a Pictograph<br>
+
+        -Collecting Data Using Tally Marks<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
