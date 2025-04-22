@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 1 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+    <h1>🧱 Grade 6 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Large Numbers (7-Digit to 9-Digits) ▼</div>
+      <div class='tooltip'>
+        -Representation of Large Numbers <br>
+
+        -Successor and Predecessor <br>
+
+        -n Digit Numbers<br>
+
+        -Place of a Digit<br>
+
+        -Compare Large Numbers<br>
+
+        -Operations on Large Numbers <br>
+
+        -Rounding Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Whole Numbers ▼</div>
+      <div class='tooltip'>
+        -Introduction to Natural Numbers and Whole Numbers<br>
+
+        -Operations on Whole Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Integers ▼</div>
+      <div class='tooltip'>
+        -Introduction to Integers<br>
+
+        -Representation of Integers on a Number Line<br>
+
+        -Successor and Predecessor of an Integer<br>
+
+        -Comparing Integers<br>
+
+        -Absolute Value of an Integer<br>
+
+        -Operations on Integers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Factors and Multiples ▼</div>
+      <div class='tooltip'>
+        -Factors and Multiples of a Number <br>
+
+        -Tests of Divisibility <br>
+
+        -Prime Factorization of a Number<br>
+
+        -HCF and LCM<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Fraction and Fractional numbers<br>
+
+        -Fractions on a Number Line<br>
+
+        -Fraction as a Part of a Collection<br>
+
+        -Fractional Part of a Collection<br>
+
+        -Identifying Like and Unlike Fractions<br>
+
+        -Unit Fraction<br>
+
+        -Proper, Improper and Mixed Fractions <br>
+
+        -Equivalent Fractions<br>
+
+        -Simplest Form of a Fraction<br>
+
+        -Comparing Fractions <br>
+
+        -Operations on Fractions<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Decimals ▼</div>
+      <div class='tooltip'>
+        -Introduction And Reading a Decimal Number<br>
+
+        -Place Value Chart<br>
+
+        -Expanded Form of Decimal Numbers<br>
+
+        -Like, Unlike And Equivalent Decimals<br>
+
+        -Ordering And Comparing Decimals<br>
+
+        -Relate Decimals and Fractions <br>
+
+        -Addition and Subtraction of Decimals <br>
+
+        -Multiplication and Division of Decimals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Simplification ▼</div>
+      <div class='tooltip'>
+        -Numerical Expressions (PEMDAS/BODMAS)<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Ratio and Proportion ▼</div>
+      <div class='tooltip'>
+        -Ratio <br>
+
+        -Proportion <br>
+
+        -Word Problems On Ratio And Proportion<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Unitary Method ▼</div>
+      <div class='tooltip'>
+        -Unitary Method<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Algebraic Expressions ▼</div>
+      <div class='tooltip'>
+        -Operations on Literals and Numbers<br>
+
+        -Variables and Constants<br>
+
+        -Powers of a Literal And Coefficients of an Algebraic Expression<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Equations in One Variable ▼</div>
+      <div class='tooltip'>
+        -Understanding Linear Equation<br>
+
+        -Writing Statements as Equations and Vice Versa<br>
+
+        -Verify that the Given Solution is the Solution of the Linear Equation<br>
+
+        -Solving Linear Equations<br>
+
+        -Word Problems Based on Linear Equations<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Mensuration ▼</div>
+      <div class='tooltip'>
+        -Area of a Figure Composed of Unit Squares<br>
+
+        -Perimeter of a Figure Composed of Unit Squares<br>
+
+        -Perimeter of a Triangle<br>
+
+        -Perimeter of Polygons<br>
+
+        -Area and Perimeter of a Rectangle<br>
+
+        -Area and Perimeter of a Square<br>
+
+        -Circumference of a Circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Understand the Basic Terms in Geometry (Point, Line, Line Segment, Ray, and Plane)<br>
+
+        -Types of Lines <br>
+
+        -Collinear and Non-Collinear Points<br>
+
+        -Angle <br>
+
+        -Triangles <br>
+
+        -Quadrilateral <br>
+
+        -Polygon<br>
+
+        -Circle<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Three Dimensional (3-D) Shapes ▼</div>
+      <div class='tooltip'>
+        -Identifying 3-D Shapes<br>
+
+        -Faces, Edges and Vertices of 3-D Shapes (Cuboid, Cube, Cone, Cylinder, Sphere, Pyramid and Prism)<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Symmetry ▼</div>
+      <div class='tooltip'>
+        -Linear Symmetry Around Us<br>
+
+        -Linear Symmetry in Geometric Figures and Alphabets<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Data Handling ▼</div>
+      <div class='tooltip'>
+        -Introduction and Tabular Representation of Data<br>
+
+        -Pictographs <br>
+
+        -Bar graphs<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
