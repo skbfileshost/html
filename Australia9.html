@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 1 - Australia</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 9 - Australia</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Number System ▼</div>
+      <div class='tooltip'>
+        -Rational and Irrational Numbers <br>
+
+        -Real Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Polynomials ▼</div>
+      <div class='tooltip'>
+        -Introduction to Polynomials<br>
+
+        -Evaluate Polynomials<br>
+
+        -Zeros of a Polynomial<br>
+
+        -Remainder Theorem<br>
+
+        -Factor Theorem<br>
+
+        -Factorization of Polynomials <br>
+
+        -Evaluate Polynomials Using Algebraic Identities<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Introduction to Euclid's Geometry <br>
+
+        -Angles and Lines <br>
+
+        -Triangles <br>
+
+        -Quadrilaterals and Parallelograms <br>
+
+        -Circles <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Coordinate Geometry ▼</div>
+      <div class='tooltip'>
+        -Understand the Terms Related to Coordinate Geometry<br>
+
+        -Identify the Coordinates and the Quadrants<br>
+
+        -Draw the Graphs of Linear Equations<br>
+
+        -Higher Order Thinking Skills (HOTS) Related to the Cartesian Plane<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Linear Equations in Two Variables ▼</div>
+      <div class='tooltip'>
+        -Solution of Linear Equations in Two Variables<br>
+
+        -Finding the Unknowns<br>
+
+        -Graph of Linear Equations in Two Variables<br>
+
+        -Word Problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Mensuration ▼</div>
+      <div class='tooltip'>
+        -Measurement of Areas <br>
+
+        -Volume and Surface Area<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Statistics and Probability ▼</div>
+      <div class='tooltip'>
+        -Statistics <br>
+
+        -Probability<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
