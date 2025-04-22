@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 2 - India</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 2 - India</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Numbers ▼</div>
+      <div class='tooltip'>
+        -Counting <br>
+
+        -Skip-Counting <br>
+
+        -Number Lines<br>
+
+        -Hundreds, Tens and Ones<br>
+
+        -Even and Odd<br>
+
+        -Number Patterns<br>
+
+        -Forming Numbers <br>
+
+        -Comparing Numbers<br>
+
+        -Ordering Numbers <br>
+
+        -Numerals and Number Names <br>
+
+        -Ordinal and Cardinal Numbers <br>
+
+        -Place Values and Face Values <br>
+
+        -Numbers on Abacus <br>
+
+        -Expanded Form of Numbers<br>
+
+        -Short Form of Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Addition ▼</div>
+      <div class='tooltip'>
+        -Add Two One-Digit Numbers<br>
+
+        -Add a Two-Digit Number With a One-Digit Number <br>
+
+        -Add Two Two-Digit Numbers <br>
+
+        -Add Two Three-Digit Numbers <br>
+
+        -Add Three or More Numbers Up To Two Digits Each <br>
+
+        -Forming Numbers Using Addition<br>
+
+        -Balancing Addition Sentences<br>
+
+        -Addition Using 10 x 10 Grid<br>
+
+        -Add Multiples of 10<br>
+
+        -Addendum and Sum<br>
+
+        -Addition - Properties and Facts <br>
+
+        -Addition Sentences<br>
+
+        -Addition Word Problems <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Subtraction ▼</div>
+      <div class='tooltip'>
+        -Subtraction - One Digit<br>
+
+        -Subtraction - Two Digits <br>
+
+        -Subtraction - Three Digits <br>
+
+        -Forming Numbers Using Subtraction<br>
+
+        -Subtraction Using 10 x 10 Grid<br>
+
+        -Subtract Multiples of 10<br>
+
+        -Minuend, Subtrahend, and Difference<br>
+
+        -Subtraction - Properties and Facts <br>
+
+        -Subtraction Sentences<br>
+
+        -Balancing Subtraction Sentences<br>
+
+        -Subtraction Word Problems <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Multiplication ▼</div>
+      <div class='tooltip'>
+        -Multiplication Facts<br>
+
+        -Multiplication as Repeated Addition<br>
+
+        -Multiplication on the Number Line<br>
+
+        -Multiplication Tables from 1 to 10<br>
+
+        -Multiplication: 1-Digit by 1-Digit<br>
+
+        -Multiplication: 2-Digit by 1-Digit <br>
+
+        -Multiplication: 3-Digit by 1-Digit <br>
+
+        -Multiplication - Properties and Facts <br>
+
+        -Multiplication Word Problems <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Division ▼</div>
+      <div class='tooltip'>
+        -Division as Equal Sharing<br>
+
+        -Division on Number Line<br>
+
+        -Division as Opposite of Multiplication<br>
+
+        -Division Using Multiplication Tables<br>
+
+        -Divide a 2-Digit Number by a 1-Digit Number <br>
+
+        -Division Facts <br>
+
+        -Division Word Problems <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Defining Fractions<br>
+
+        -Fraction as a part of the whole<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Point<br>
+
+        -Line<br>
+
+        -Types of Lines<br>
+
+        -Identify 2-D Objects<br>
+
+        -Using a Ruler<br>
+
+        -Properties of 2-D Shapes <br>
+
+        -Counting the Number of Shapes in a Picture<br>
+
+        -Identify 3-D Objects<br>
+
+        -Properties of 3-D Shapes<br>
+
+        -Drawing Shapes Using Solids<br>
+
+        -Sliding and Rolling Movements<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measurement ▼</div>
+      <div class='tooltip'>
+        -Measurement of Length <br>
+
+        -Measurement of Weight <br>
+
+        -Measurement of Capacity (Volume) <br>
+
+        -Choose the Appropriate Measuring Tool<br>
+
+        -Measure Using Objects<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Money ▼</div>
+      <div class='tooltip'>
+        -Recognizing currency<br>
+
+        -Count Money <br>
+
+        -Exchanging Money<br>
+
+        -Conversion of Rupees to/from Paise<br>
+
+        -Addition and Subtraction of Money <br>
+
+        -Word Problems on Addition and Subtraction of Money <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Time ▼</div>
+      <div class='tooltip'>
+        -Basic Facts About Clocks and Time<br>
+
+        -Convert <br>
+
+        -Read Time on Clocks <br>
+
+        -Today, Yesterday and Tomorrow<br>
+
+        -Daily Routine<br>
+
+        -Days of the week<br>
+
+        -Months of a year<br>
+
+        -Calendar<br>
+
+        -Seasons<br>
+
+        -Time - Word Problems<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Patterns ▼</div>
+      <div class='tooltip'>
+        -Introduction to Pattern<br>
+
+        -Repeating Patterns <br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
