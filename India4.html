@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Grade 4 - India</title>
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .zone {
+      background-color: #1e293b;
+      border: 2px solid #38bdf8;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: default;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 100%;
+    }
+
+    .wrapper:hover .zone {
+      background-color: #334155;
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      background-color: #1e40af;
+      color: #fff;
+      padding: 0 1rem;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    .wrapper:hover .tooltip {
+      max-height: 500px; /* sufficient height for the tallest content */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧱 Grade 4 - India</h1>
+  <div class='map'>
+    <div class='wrapper'>
+      <div class='zone'>Roman Numerals (up to 100) ▼</div>
+      <div class='tooltip'>
+        -Introduction to Roman Numerals<br>
+
+        -Write Roman Numerals for Hindu-Arabic Numerals<br>
+
+        -Write Hindu-Arabic Numerals for Roman Numerals<br>
+
+        -Meaningless Roman Numerals<br>
+
+        -Compare Roman Numerals<br>
+
+        -Operations on Roman Numerals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Number System ▼</div>
+      <div class='tooltip'>
+        -Representation of Large Numbers <br>
+
+        -Place Value and Face Value of a Digit in a Numeral<br>
+
+        -Expanded Form of a Number<br>
+
+        -Successor and Predecessor <br>
+
+        -Skip Counting<br>
+
+        -Compare and Order Numbers <br>
+
+        -Forming Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Addition and Subtraction ▼</div>
+      <div class='tooltip'>
+        -Addition <br>
+
+        -Subtraction <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Multiplication and Division ▼</div>
+      <div class='tooltip'>
+        -Multiplication <br>
+
+        -Division <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Factors and Multiples ▼</div>
+      <div class='tooltip'>
+        -Factors and Multiples of a Number <br>
+
+        -Prime and Composite Numbers <br>
+
+        -Prime Factors of a Number by Factor Tree Method<br>
+
+        -Tests of Divisibility <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Number Patterns ▼</div>
+      <div class='tooltip'>
+        -Rule for the Pattern<br>
+
+        -Find the Missing Term in the Pattern<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Estimation ▼</div>
+      <div class='tooltip'>
+        -Rounding Numbers <br>
+
+        -Estimating Sum<br>
+
+        -Estimating Difference<br>
+
+        -Estimating Products<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Fractions ▼</div>
+      <div class='tooltip'>
+        -Fraction as a Part of a Whole<br>
+
+        -Fractional Numbers and Fractions<br>
+
+        -Numerator and Denominator of a Fraction<br>
+
+        -Division as Fraction<br>
+
+        -Fraction as Division<br>
+
+        -Fractions on a Number Line<br>
+
+        -Equivalent Fractions<br>
+
+        -Comparison of Fractions <br>
+
+        -Like and Unlike Fractions<br>
+
+        -Unit Fraction<br>
+
+        -Proper, Improper and Mixed fractions <br>
+
+        -Addition and Subtraction of Fractions <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Decimals ▼</div>
+      <div class='tooltip'>
+        -Conversions <br>
+
+        -Pictorial Representation of a Decimal Number<br>
+
+        -Number Names of Decimal Numbers<br>
+
+        -Place Value of the Digits of a Decimal Number<br>
+
+        -Expanded Form of Decimal Numbers<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Money ▼</div>
+      <div class='tooltip'>
+        -Express Money in Words<br>
+
+        -Express Money in Figures<br>
+
+        -Convert to Paise <br>
+
+        -Convert from Paise <br>
+
+        -Addition of Money<br>
+
+        -Subtraction of money<br>
+
+        -Multiplication of Money by a Whole Number<br>
+
+        -Division of Money by a Whole Number<br>
+
+        -Word problems on money <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Measures of Length, Mass and Capacity ▼</div>
+      <div class='tooltip'>
+        -Measurement of Length <br>
+
+        -Measurement of Mass/Weight <br>
+
+        -Measurement of Capacity/Volume <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Unitary Method ▼</div>
+      <div class='tooltip'>
+        -Word problems Using Unitary Method Involving Multiplication<br>
+
+        -Word problems Using Unitary Method Involving Division<br>
+
+        -Word problems Using Unitary Method Involving Both Multiplication and Division<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Geometry ▼</div>
+      <div class='tooltip'>
+        -Point, Line Segment, Line and Ray <br>
+
+        -Open and Closed Shapes<br>
+
+        -Simple Closed Shapes<br>
+
+        -Polygons <br>
+
+        -Circle <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Perimeter of Rectilinear Figures ▼</div>
+      <div class='tooltip'>
+        -Basic Definition of Perimeter<br>
+
+        -Perimeter of Triangle<br>
+
+        -Perimeter of a Rectangle<br>
+
+        -Perimeter of a Square<br>
+
+        -Perimeter of a Other Geometric Figures<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Three-Dimensional Shapes ▼</div>
+      <div class='tooltip'>
+        -Identify Different Solid Shapes (Cuboid, Cube, Cone, Cylinder, Sphere, Prism, and Pyramids)<br>
+
+        -Vertices, Edges and Faces of Solid Objects<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Symmetry ▼</div>
+      <div class='tooltip'>
+        -Introduction to Symmetry<br>
+
+        -Symmetry Around Us<br>
+
+        -Symmetry in Geometric Figures<br>
+
+        -Symmetry in Alphabets<br>
+
+        -Symmetry in Numerals<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Time ▼</div>
+      <div class='tooltip'>
+        -Clock <br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Calendar ▼</div>
+      <div class='tooltip'>
+        -Days of the Week<br>
+
+        -Months of the Year<br>
+
+        -Ordinary, Leap, and Century Years<br>
+
+        -Writing Dates<br>
+
+        -Word Problems on Calendar<br>
+      </div>
+    </div>
+
+    <div class='wrapper'>
+      <div class='zone'>Pictorial Representation of Data ▼</div>
+      <div class='tooltip'>
+        -Basic Definition of Data<br>
+
+        -Pictographs <br>
+
+        -Introduction to Bar Graphs<br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
