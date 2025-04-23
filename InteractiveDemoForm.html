@@ -150,6 +150,15 @@
             line-height: 1.6;
         }
     </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+            publicKey: "7FC5b5JMMzRfRpiY4",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -376,22 +385,47 @@
 
         function submitForm(event) {
             event.preventDefault();
-            const form = document.getElementById('multiStepForm');
-            const formData = new FormData(form);
-            const formEntries = {};
 
-            formData.forEach((value, key) => {
-                if (formEntries[key]) {
-                    formEntries[key].push(value);
-                } else {
-                    formEntries[key] = [value];
-                }
-            });
+            const parentName = document.getElementById('parentName').value.trim();
+            const studentName = document.getElementById('studentName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const countryRegion = document.getElementById('countryRegion').value;
+            const sessionType = document.getElementById('sessionType').value;
+            const grade = document.getElementById('grade').value;
 
-            let formDetails = '';
-            for (const key in formEntries) {
-                formDetails += `<strong>${key}</strong>: ${formEntries[key].join(', ')}<br>`;
-            }
+            const learningStatusElems = document.querySelectorAll('#statusSection input[type="checkbox"]:checked');
+            const learningStatus = Array.from(learningStatusElems).map(cb => cb.value).join('; ');
+
+            const learningGoalsElems = document.querySelectorAll('#goalsSection input[type="checkbox"]:checked');
+            const learningGoals = Array.from(learningGoalsElems).map(cb => cb.value).join('; ');
+
+            // EmailJS sending
+            const templateParams = {
+                parent_name: parentName,
+                student_name: studentName,
+                email: email,
+                country_region: countryRegion,
+                session_type: sessionType,
+                grade: grade,
+                learning_status: learningStatus,
+                learning_goals: learningGoals
+            };
+
+            emailjs.send('service_fsqcwpt', 'template_efn7l6w', templateParams)
+                .then(() => alert("Sent"))
+                .catch(() => alert("Fail"));
+
+            // Confirmation display
+            let formDetails = `
+        <strong>Parent Name</strong>: ${parentName}<br>
+        <strong>Student Name</strong>: ${studentName}<br>
+        <strong>Email</strong>: ${email}<br>
+        <strong>Country or Region</strong>: ${countryRegion}<br>
+        <strong>Session Type</strong>: ${sessionType}<br>
+        <strong>Grade</strong>: ${grade}<br>
+        <strong>Learning Status</strong>: ${learningStatus}<br>
+        <strong>Learning Goals</strong>: ${learningGoals}<br>
+      `;
 
             document.getElementById('slide' + current).classList.remove('active');
             document.getElementById('confirmationText').innerHTML = formDetails;
@@ -400,13 +434,12 @@
             updateProgressBar();
 
             setTimeout(() => {
-                form.reset();
+                document.getElementById('multiStepForm').reset();
                 document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
                 document.getElementById('confirmation').classList.remove('active');
                 current = 1;
                 document.getElementById('slide1').classList.add('active');
                 updateProgressBar();
-                document.querySelectorAll('.slide').forEach(bindValidation);
             }, 7000);
         }
     </script>
