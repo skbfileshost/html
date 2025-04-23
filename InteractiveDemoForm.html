@@ -253,14 +253,14 @@
             <div class='options' id='statusSection'>
                 <input type='checkbox' id='status1' name='Learning Status' value='Thriving and Excelling'>
                 <label for='status1'>Thriving and Excelling</label>
-                <input type='checkbox' id='status2' name='Learning Status' value='Doing Well, but Ready for More Challenge'>
-                <label for='status2'>Doing Well, but Ready for More Challenge</label>
-                <input type='checkbox' id='status3' name='Learning Status' value='Experiencing Some Difficulties'>
-                <label for='status3'>Experiencing Some Difficulties</label>
+                <input type='checkbox' id='status2' name='Learning Status' value='Doing well, but ready for More Challenge'>
+                <label for='status2'>Doing well, but ready for More Challenge</label>
+                <input type='checkbox' id='status3' name='Learning Status' value='Experiencing some Difficulties'>
+                <label for='status3'>Experiencing some Difficulties</label>
                 <input type='checkbox' id='status4' name='Learning Status' value='Requires Individualized Support'>
                 <label for='status4'>Requires Individualized Support</label>
-                <input type='checkbox' id='status5' name='Learning Status' value='Unsure / Would Like Guidance'>
-                <label for='status5'>Unsure / Would Like Guidance</label>
+                <input type='checkbox' id='status5' name='Learning Status' value='Unsure / Would like Guidance'>
+                <label for='status5'>Unsure / Would like Guidance</label>
             </div>
             <div>
                 <button type='button' onclick='prevSlide(5)'>Back</button>
@@ -411,9 +411,9 @@
                 learning_goals: learningGoals
             };
 
-            emailjs.send('service_fsqcwpt', 'template_efn7l6w', templateParams)
-                .then(() => alert("Sent"))
-                .catch(() => alert("Fail"));
+            emailjs.send('service_fsqcwpt', 'template_efn7l6w', templateParams);
+                // .then(() => alert("Sent"))
+                // .catch(() => alert("Fail"));
 
             // Confirmation display
             let formDetails = `
